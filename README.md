@@ -23,7 +23,7 @@ var options = {
 
 var scrape = new scraper.GoogleScraper(options);
 
-scrape.getGoogeLinks(function(arrayLink){
+scrape.getGoogleLinks(function(arrayLink){
   console.log(arrayLink);
 });
 ```
