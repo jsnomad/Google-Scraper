@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/code4funFr/Google-Scraper.png?branch=master)](https://travis-ci.org/code4funFr/Google-Scraper)
 # GoogleScraper.js
 
 GoogleScraper is a nodejs module allowing extract links from Google SERP.
