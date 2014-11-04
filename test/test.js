@@ -1,6 +1,6 @@
 var assert = require("assert");
 
-var scraper = require('google-scraper');
+var scraper = require('../index.js');
 
 var options = {
   keyword : "javascript",
@@ -12,12 +12,10 @@ var scrape = new scraper.GoogleScraper(options);
 
 describe('getGoogleLinks()', function(){
     it('There are links', function(done){
-
     scrape.getGoogleLinks(function(arrayLink){
-      	var value = (arrayLink.length > 0 ? true : false);
-		assert(value, 'Good');
-	  	done();
-	});
-
+    	var value = (arrayLink.length > 0 ? true : false);
+  		assert(value, 'Good');
+  	  done();
+	  });
   })
 })
