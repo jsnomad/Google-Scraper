@@ -9,11 +9,17 @@
     "type": "git",
     "url": "https://github.com/code4funFr/Google-Scraper.git"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "async": "0.2.0",
     "cheerio": "0.11.0",
     "request": "2.16.6"
   },
+  "devDependencies": {
+   "mocha": "*"
+ },
   "engines": {
     "node": "*"
   }
