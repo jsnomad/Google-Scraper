@@ -1,21 +1,20 @@
-var assert = require("assert");
+import { GoogleScraper } from '../index'
+import { expect, should } from 'chai'
 
-var scraper = require('../index.js');
-
-var options = {
-  keyword : "javascript",
-  language : "en",
-  results : 100
+const options = {
+  keyword: "javascript",
+  language: "fr",
+  results: 100
 };
 
-var scrape = new scraper.GoogleScraper(options);
+const scrape = new GoogleScraper(options);
+should()
 
-describe('getGoogleLinks()', function(){
-    it('There are links', function(done){
-    scrape.getGoogleLinks(function(arrayLink){
-    	var value = (arrayLink.length > 0 ? true : false);
-  		assert(value, 'Good');
-  	  done();
-	  });
+describe('Get google links', () => {
+  it('should get at least 1 link', (done) => {
+    scrape.getGoogleLinks.then(function(value) {
+      expect(value.length).to.be.at.least(1);
+    })
+    done()
   })
 })
