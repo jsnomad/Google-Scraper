@@ -1,7 +1,7 @@
 {
   "name": "google-scraper",
   "main": "./index",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Extract links from Google SERP",
   "author": "Thomas Blanc-hector",
   "keywords": [
@@ -21,6 +21,10 @@
     "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill",
     "test": "npm run lint && npm run mocha"
   },
+  "dependencies": {
+    "cheerio": "^0.11.0",
+    "request": "^2.69.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-eslint": "^5.0.0-beta10",
@@ -28,10 +32,8 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.3.13",
     "chai": "^3.5.0",
-    "cheerio": "^0.11.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.1",
-    "mocha": "^2.4.5",
-    "request": "^2.69.0"
+    "mocha": "^2.4.5"
   }
 }
