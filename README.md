@@ -2,7 +2,7 @@
 
 # GoogleScraper.js [![Circle CI](https://circleci.com/gh/jsnomad/Google-Scraper.svg?style=svg)](https://circleci.com/gh/jsnomad/Google-Scraper)
 
-GoogleScraper is a nodejs module allowing extract links from Google SERP.
+GoogleScraper is a nodejs module to extract links from Google SERP.
 
 ## Download
 The source is available for download from
@@ -25,8 +25,8 @@ var options = {
 
 const scrape = new Scraper.GoogleScraper(options);
 
-scrape.getGoogleLinks.then(links => {
-  console.log(links);
+scrape.getGoogleLinks.then(function(value) {
+  console.log(value);
 }).catch(function(e) {
   console.log(e);
 })
