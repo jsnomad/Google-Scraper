@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/code4funFr/Google-Scraper.png?branch=master)](https://travis-ci.org/code4funFr/Google-Scraper)
+[![Circle CI](https://circleci.com/gh/jsnomad/Google-Scraper.svg?style=svg)](https://circleci.com/gh/jsnomad/Google-Scraper)
 # GoogleScraper.js
 
 GoogleScraper is a nodejs module allowing extract links from Google SERP.
@@ -14,17 +14,19 @@ Alternatively, you can install using Node Package Manager (npm):
 ## Example
 
 ```javascript
-var scraper = require('google-scraper');
+var Scraper = require('google-scraper');
 
 var options = {
-  keyword : "javascript",
-  language : "fr",
-  results : 100
+  keyword: "javascript",
+  language: "fr",
+  results: 100
 };
 
-var scrape = new scraper.GoogleScraper(options);
+const scrape = new Scraper.GoogleScraper(options);
 
-scrape.getGoogleLinks(function(arrayLink){
-  console.log(arrayLink);
-});
+scrape.getGoogleLinks.then(value => {
+  console.log(value);
+}).catch(function(e) {
+  console.log(e);
+})
 ```
