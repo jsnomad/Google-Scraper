@@ -1,7 +1,7 @@
 {
   "name": "google-scraper",
   "main": "./index",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Extract links from Google SERP",
   "author": "Thomas Blanc-hector",
   "keywords": [
