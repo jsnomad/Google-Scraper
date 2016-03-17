@@ -12,7 +12,7 @@ should()
 
 describe('Get google links', () => {
   it('should get at least 1 link', (done) => {
-    scrape.getGoogleLinks.then(function(value) {
+    scrape.getGoogleLinks.then((value) => {
       expect(value.length).to.be.at.least(1);
     })
     done()
