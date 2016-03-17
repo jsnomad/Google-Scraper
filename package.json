@@ -1,9 +1,9 @@
 {
   "name": "google-scraper",
   "main": "./index",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Extract links from Google SERP",
-  "author": "Thomas Blanc-hector",
+  "author": "Thomas Blanc-hector <thomas.blanc.hector@gmail.com>",
   "keywords": [
     "google",
     "scrape",
@@ -12,8 +12,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/code4funFr/Google-Scraper.git"
+    "url": "https://github.com/jsnomad/Google-Scraper"
   },
+  "license": "MIT",
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
