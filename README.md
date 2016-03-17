@@ -1,4 +1,4 @@
-![NPM Badge](https://nodei.co/npm/google-scraper.png?downloads=true&downloadRank=true&stars=true)
+[![NPM Badge](https://nodei.co/npm/google-scraper.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/google-scraper)
 
 # GoogleScraper.js [![Circle CI](https://circleci.com/gh/jsnomad/Google-Scraper.svg?style=svg)](https://circleci.com/gh/jsnomad/Google-Scraper)
 
