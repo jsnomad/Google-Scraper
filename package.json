@@ -1,7 +1,7 @@
 {
   "name": "google-scraper",
   "main": "./index",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extract links from Google SERP",
   "author": "Thomas Blanc-hector <thomas.blanc.hector@gmail.com>",
   "keywords": [
@@ -23,7 +23,7 @@
     "test": "npm run lint && npm run mocha"
   },
   "dependencies": {
-    "cheerio": "^0.11.0",
+    "cheerio": "^0.20.0",
     "request": "^2.69.0"
   },
   "devDependencies": {
