@@ -18,11 +18,11 @@ export class GoogleScraper {
 
   getHtml() {
     return new Promise((resolve, reject) => {
-      request(`http://www.google.fr/search?hl=${this.options.language}&num=${this.options.results}&q=${this.options.keyword}`, (err, res, body) => {
+      request(`http://www.google.${this.options.tld}/search?hl=${this.options.language}&num=${this.options.results}&q=${this.options.keyword}`, (err, res, body) => {
         if (err) {
           return reject(err)
         } else if (res.statusCode !== 200) {
-          const error = new Error('Unexpected status code: ${res.statusCode}')
+          const error = new Error(`Unexpected status code: ${res.statusCode}`)
           error.res = res
           return reject(error)
         }
