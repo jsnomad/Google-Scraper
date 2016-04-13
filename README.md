@@ -15,11 +15,12 @@ Alternatively, you can install using Node Package Manager (npm):
 ## Example
 
 ```javascript
-var Scraper = require('google-scraper');
+const Scraper = require('google-scraper');
 
-var options = {
+const options = {
   keyword: "javascript",
   language: "fr",
+  tld:"fr",
   results: 100
 };
 
