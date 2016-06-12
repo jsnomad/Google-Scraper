@@ -23,7 +23,7 @@
     "test": "npm run lint && npm run mocha"
   },
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.21.0",
     "request": "^2.69.0"
   },
   "devDependencies": {
