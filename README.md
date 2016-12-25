@@ -1,6 +1,6 @@
 [![NPM Badge](https://nodei.co/npm/google-scraper.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/google-scraper)
 
-# GoogleScraper.js [![Circle CI](https://circleci.com/gh/jsnomad/Google-Scraper.svg?style=svg)](https://circleci.com/gh/jsnomad/Google-Scraper) [![Dependency Status](https://david-dm.org/jsnomad/Google-Scraper.svg)](https://david-dm.org/jsnomad/Google-Scraper)
+# google-scraper [![Circle CI](https://circleci.com/gh/jsnomad/Google-Scraper.svg?style=svg)](https://circleci.com/gh/jsnomad/Google-Scraper) [![Dependency Status](https://david-dm.org/jsnomad/Google-Scraper.svg)](https://david-dm.org/jsnomad/Google-Scraper)
 
 GoogleScraper is a nodejs module to extract links from Google SERP.
 
@@ -15,7 +15,7 @@ Alternatively, you can install using Node Package Manager (npm):
 ## Example
 
 ```javascript
-const Scraper = require('google-scraper');
+const GoogleScraper = require('google-scraper');
 
 const options = {
   keyword: "javascript",
@@ -24,7 +24,7 @@ const options = {
   results: 100
 };
 
-const scrape = new Scraper.GoogleScraper(options);
+const scrape = new GoogleScraper(options);
 
 scrape.getGoogleLinks.then(function(value) {
   console.log(value);
