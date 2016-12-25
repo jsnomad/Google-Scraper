@@ -1,16 +1,16 @@
 import request from 'request'
 import cheerio from 'cheerio'
 
-export class GoogleScraper {
+export default class GoogleScraper {
   constructor(options) {
     this.options = options;
   }
 
   get getGoogleLinks() {
     return new Promise((resolve, reject) => {
-      this.getHtml().then(body => {
+      this.getHtml().then((body) => {
         return resolve(this.extractLink(body))
-      }).catch(err => {
+      }).catch((err) => {
         return reject(err);
       })
     })
@@ -26,12 +26,12 @@ export class GoogleScraper {
           error.res = res
           return reject(error)
         }
-        resolve(body)
+        return resolve(body)
       })
     })
   }
 
-  extractLink(html) {
+  extractLink(html) { // eslint-disable-line class-methods-use-this
     const arrayLinks = [];
     const $ = cheerio.load(html);
     $('h3.r a').each((i, link) => {
