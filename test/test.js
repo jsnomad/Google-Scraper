@@ -1,4 +1,4 @@
-import { GoogleScraper } from '../index'
+import GoogleScraper from '../index'
 import { expect, should } from 'chai'
 
 const options = {
