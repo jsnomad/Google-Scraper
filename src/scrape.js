@@ -1,7 +1,9 @@
 import request from 'request'
 import cheerio from 'cheerio'
+import * as config from '../config'
 
 export default class GoogleScraper {
+
   constructor(options) {
     this.options = options;
   }
@@ -17,8 +19,11 @@ export default class GoogleScraper {
   }
 
   getHtml() {
+    const option = {
+      url: config.urlSearch(this.options.tld, this.options.language, this.options.results, this.options.keyword),
+    }
     return new Promise((resolve, reject) => {
-      request(`http://www.google.${this.options.tld}/search?hl=${this.options.language}&num=${this.options.results}&q=${this.options.keyword}`, (err, res, body) => {
+      request(option, (err, res, body) => {
         if (err) {
           return reject(err)
         } else if (res.statusCode !== 200) {
@@ -36,7 +41,7 @@ export default class GoogleScraper {
     const $ = cheerio.load(html);
     $('h3.r a').each((i, link) => {
       const linkClean = $(link).attr('href').match('(?=http|https).*(?=&sa)')
-      if (linkClean !== null) {
+      if (linkClean) {
         arrayLinks.push(linkClean[0]);
       }
     })
