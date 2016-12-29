@@ -9,6 +9,7 @@
   "extends": "airbnb/base",
   "rules": {
     "semi": [0, "always"],
-    "arrow-body-style": [2, "always"]
+    "arrow-body-style": [2, "always"],
+    "max-len" : ['error', 120]
    }
 }
