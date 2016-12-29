@@ -7,9 +7,10 @@ GoogleScraper is a nodejs module to extract links from Google SERP.
 ## Download
 The source is available for download from
 [GitHub](https://github.com/jsnomad/Google-Scraper).
-Alternatively, you can install using Node Package Manager (npm):
+Alternatively, you can install using Node Package Manager (npm) or yarn:
 <pre>
   npm install google-scraper
+  yarn add google-scraper
 </pre>
 
 ## Example
