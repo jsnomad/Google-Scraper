@@ -1,6 +1,6 @@
 import request from 'request'
 import cheerio from 'cheerio'
-import * as config from '../config'
+import * as config from './config'
 
 export default class GoogleScraper {
 
@@ -39,7 +39,7 @@ export default class GoogleScraper {
   extractLink(html) { // eslint-disable-line class-methods-use-this
     const arrayLinks = [];
     const $ = cheerio.load(html);
-    $('h3.r a').each((i, link) => {
+    $(config.selectorSearch).each((i, link) => {
       const linkClean = $(link).attr('href').match('(?=http|https).*(?=&sa)')
       if (linkClean) {
         arrayLinks.push(linkClean[0]);
